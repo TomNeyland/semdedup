@@ -115,7 +115,7 @@ def stats(
     column: str | None = typer.Option(None, help="Column name for CSV."),
 ) -> None:
     """Quick stats about input data."""
-    from semdedup.io.readers import read_csv, read_json, read_jsonl, read_text
+    from labelmerge.io.readers import read_csv, read_json, read_jsonl, read_text
 
     suffix = input_file.suffix.lower()
     if suffix == ".json" and path is not None:
